@@ -101,6 +101,7 @@ export function reactive(target: object) {
  * root level).
  */
 export function shallowReactive<T extends object>(target: T): T {
+  console.log('shallowReactive')
   return createReactiveObject(
     target,
     false,
