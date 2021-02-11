@@ -13,6 +13,7 @@ node で実行するため、cjs でビルドする。
 yarn dev reactivity --formats cjs
 ```
 
+
 ```bash
 ./node_modules/.bin/tsc ./sandbox/sandbox.ts && node ./sandbox/sandbox.js
 ```
