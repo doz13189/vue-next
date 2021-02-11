@@ -18,6 +18,6 @@ const reactiveObj = reactive({
     e: 5
   }
 })
-
+reactiveObj.a = 3
 
 
