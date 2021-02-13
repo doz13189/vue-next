@@ -101,7 +101,6 @@ export function reactive(target: object) {
  * root level).
  */
 export function shallowReactive<T extends object>(target: T): T {
-  console.log('shallowReactive')
   return createReactiveObject(
     target,
     false,
@@ -186,12 +185,14 @@ function createReactiveObject(
   }
   // target already has corresponding Proxy
   const proxyMap = isReadonly ? readonlyMap : reactiveMap
+  
   const existingProxy = proxyMap.get(target)
   if (existingProxy) {
     return existingProxy
   }
   // only a whitelist of value types can be observed.
   const targetType = getTargetType(target)
+  
   if (targetType === TargetType.INVALID) {
     return target
   }
