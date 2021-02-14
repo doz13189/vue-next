@@ -139,6 +139,7 @@ export function resetTracking() {
 }
 
 export function track(target: object, type: TrackOpTypes, key: unknown) {
+  
   if (!shouldTrack || activeEffect === undefined) {
     return
   }
@@ -172,7 +173,9 @@ export function trigger(
   oldValue?: unknown,
   oldTarget?: Map<unknown, unknown> | Set<unknown>
 ) {
+
   const depsMap = targetMap.get(target)
+
   if (!depsMap) {
     // never been tracked
     return
@@ -227,6 +230,7 @@ export function trigger(
         }
         break
       case TriggerOpTypes.SET:
+
         if (isMap(target)) {
           add(depsMap.get(ITERATE_KEY))
         }

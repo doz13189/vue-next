@@ -12,7 +12,7 @@
 //       return TargetType.INVALID
 //   }
 // }
-var _a = require('../packages/reactivity/dist/reactivity.cjs.js'), reactive = _a.reactive, effect = _a.effect, isReactive = _a.isReactive;
+var _a = require('../../packages/reactivity/dist/reactivity.cjs.js'), reactive = _a.reactive, effect = _a.effect, isReactive = _a.isReactive;
 // Object
 var reactiveObj = reactive({ a: 1, b: 2 });
 console.log(isReactive(reactiveObj));

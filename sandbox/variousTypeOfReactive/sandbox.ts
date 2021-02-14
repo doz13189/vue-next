@@ -1,3 +1,5 @@
+export default {}
+
 // function targetTypeMap(rawType: string) {
 //   switch (rawType) {
 //     case 'Object':
